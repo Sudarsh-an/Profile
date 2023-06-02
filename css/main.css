@@ -1,0 +1,160 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+ul.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+
+  ul.navbar li a:hover {
+    color: #0088a9;
+  }
+
+  .navbar{
+    display: flex;
+    text-decoration: none;
+    color: white;
+    list-style-type: none;
+    background-color: #333;
+   /* background: linear-gradient(to bottom right, #24252a, grey);*/
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+
+  
+  }
+
+  .navbar li{
+    padding: 2rem;
+   /* flex-grow: 1; */
+  }
+
+  .navbar li a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .navbar li:nth-child(1){
+    font-size: 2rem;
+    margin-right: auto;
+  }
+
+  .responsive-image {
+    max-width: 50%;
+    height: auto;
+  }
+
+  #image{
+      height:auto;
+      margin:auto;  
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50%;
+      padding-top: 9rem;
+  }
+
+  #container{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 0.50fr 0.50fr;
+    grid-template-areas:
+        "image-grid aside"
+        "footer footer"
+    ;
+    grid-template-rows:4fr 0.5fr;
+    grid-gap: 1.2rem;
+  }
+
+  #image-grid{
+    grid-area: image-grid;
+    display: grid;
+    place-items: center;
+  }
+
+  #aside{
+    grid-area: aside;
+    margin: auto;
+  }
+
+  #aside p{
+    padding: 0  2% ;
+    font-size: 1.25rem;
+  }
+
+  #aside a{
+    color: black;
+  }
+
+  #footer {
+    grid-area: footer;
+    background: linear-gradient(to bottom right, #24252a, grey);
+    padding: 5%;
+    text-align: center;
+}
+
+
+ /* @media all and (max-width: 600px) {
+
+    .navbar{
+        display: flex;
+        flex-grow: 1;
+        flex-wrap: wrap;
+        color:blue;
+    }
+
+    .navbar li a {
+        text-decoration: none;
+        color: white;
+      }
+}*/
+
+@media (max-width: 600px) {
+    .navbar{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+   /* .navbar li a{
+      color:blue;
+    } */
+
+    .navbar li{
+      flex-grow: 1 !important;
+    }
+
+    #container{
+      display: grid;
+      height: 100vh;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+          "image-grid"
+          "aside"
+          "footer"
+      ;
+     
+    }
+
+    #aside{
+      grid-area: aside;
+      display: grid;
+      margin: auto;
+      padding: 20px;
+
+    }
+
+    #aside p{
+      margin: auto;
+    }
+
+    .responsive-image {
+      max-width: 100%;
+      height: auto;
+    }
+}
